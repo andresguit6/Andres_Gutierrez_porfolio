@@ -53,17 +53,64 @@
       display: flex; align-items: center; justify-content: space-between;
       gap: 16px; min-height: 66px; padding: 10px 0;
     }
+
+    /* BRAND */
+    .brand-link {
+      display: flex; align-items: center; gap: 12px;
+      text-decoration: none; color: var(--text);
+    }
+    .brand-avatar {
+      width: 40px; height: 40px; border-radius: 12px;
+      background: linear-gradient(135deg, #38bdf8, #8b5cf6);
+      display: grid; place-items: center;
+      font-weight: 900; font-size: .95rem; color: #fff;
+      flex-shrink: 0;
+    }
+    .brand-text { line-height: 1.25 }
+    .brand-name { font-weight: 800; font-size: .95rem; color: var(--text) }
+    .brand-role { font-size: .78rem; color: var(--muted); font-weight: 500 }
+
+    /* NAV RIGHT */
+    .nav-right {
+      display: flex; align-items: center; gap: 20px;
+    }
     .back-btn {
       display: inline-flex; align-items: center; gap: 8px;
       padding: 10px 16px; border-radius: 12px;
       background: rgba(255,255,255,.05);
       border: 1px solid rgba(255,255,255,.08);
-      color: var(--muted); font-weight: 600;
+      color: var(--muted); font-weight: 600; font-size: .88rem;
       transition: .2s ease; cursor: pointer;
     }
     .back-btn:hover { color: var(--text); background: rgba(255,255,255,.09) }
-    .brand { font-weight: 800; font-size: .95rem }
-    .brand span { color: var(--muted); font-weight: 500 }
+
+    /* LANGUAGE SWITCHER - cápsula igual al index.html */
+    .lang-switcher {
+      display: inline-flex; align-items: center;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 999px;
+      padding: 4px;
+      gap: 2px;
+    }
+    .lang-btn {
+      padding: 6px 13px;
+      border-radius: 999px;
+      border: none;
+      background: transparent;
+      color: var(--muted);
+      font-size: .82rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .2s ease;
+      letter-spacing: .04em;
+    }
+    .lang-btn.active {
+      background: rgba(255,255,255,.15);
+      color: var(--text);
+      box-shadow: 0 2px 8px rgba(0,0,0,.25);
+    }
+    .lang-btn:hover:not(.active) { color: var(--text) }
 
     /* HERO PROYECTO */
     .project-hero {
@@ -229,26 +276,17 @@
       border-color: rgba(56,189,248,.2);
       transform: translateY(-3px);
     }
-    .dim-icon {
-      font-size: 1.6rem; margin-bottom: 10px;
-    }
-    .dim-title {
-      font-size: .97rem; font-weight: 700;
-      margin-bottom: 8px; color: var(--text);
-    }
+    .dim-icon { font-size: 1.6rem; margin-bottom: 10px }
+    .dim-title { font-size: .97rem; font-weight: 700; margin-bottom: 8px; color: var(--text) }
     .dim-pct {
       display: inline-block;
       padding: 4px 10px; border-radius: 999px;
-      font-size: .8rem; font-weight: 700;
-      margin-bottom: 8px;
+      font-size: .8rem; font-weight: 700; margin-bottom: 8px;
       background: rgba(56,189,248,.1);
       border: 1px solid rgba(56,189,248,.18);
       color: var(--primary);
     }
-    .dim-text {
-      font-size: .88rem; color: var(--muted);
-      line-height: 1.65;
-    }
+    .dim-text { font-size: .88rem; color: var(--muted); line-height: 1.65 }
     .dim-bullets {
       list-style: none; padding: 0; margin: 8px 0 0;
       font-size: .83rem; color: var(--muted);
@@ -259,12 +297,10 @@
     /* HALLAZGOS */
     .findings-list { display: grid; gap: 16px }
     .finding-item {
-      display: flex; gap: 14px;
-      padding: 16px; border-radius: 16px;
+      display: flex; gap: 14px; padding: 16px; border-radius: 16px;
       background: rgba(255,255,255,.03);
       border: 1px solid rgba(255,255,255,.055);
-      align-items: flex-start;
-      transition: .2s ease;
+      align-items: flex-start; transition: .2s ease;
     }
     .finding-item:hover { border-color: rgba(56,189,248,.15) }
     .finding-num {
@@ -275,15 +311,10 @@
       color: var(--primary);
     }
     .finding-body strong { display: block; margin-bottom: 5px; font-size: 1rem }
-    .finding-body p {
-      margin: 0; color: var(--muted);
-      font-size: .9rem; line-height: 1.65;
-    }
+    .finding-body p { margin: 0; color: var(--muted); font-size: .9rem; line-height: 1.65 }
     .finding-highlight {
-      display: inline-block;
-      margin-top: 8px; padding: 5px 12px;
-      border-radius: 999px; font-size: .82rem;
-      font-weight: 700;
+      display: inline-block; margin-top: 8px; padding: 5px 12px;
+      border-radius: 999px; font-size: .82rem; font-weight: 700;
       background: rgba(16,185,129,.1);
       border: 1px solid rgba(16,185,129,.2);
       color: #a0f4ce;
@@ -299,17 +330,14 @@
     }
     .source-icon {
       width: 34px; height: 34px; border-radius: 10px;
-      display: grid; place-items: center; flex-shrink: 0;
-      font-size: 1rem;
+      display: grid; place-items: center; flex-shrink: 0; font-size: 1rem;
       background: linear-gradient(135deg, rgba(56,189,248,.15), rgba(139,92,246,.15));
     }
     .source-name { font-weight: 700; font-size: .92rem; margin-bottom: 3px }
     .source-desc { font-size: .83rem; color: var(--muted); line-height: 1.55 }
 
     /* TECH STACK */
-    .tech-stack {
-      display: flex; flex-wrap: wrap; gap: 10px;
-    }
+    .tech-stack { display: flex; flex-wrap: wrap; gap: 10px }
     .tech-badge {
       padding: 9px 14px; border-radius: 12px;
       font-size: .88rem; font-weight: 700;
@@ -323,17 +351,12 @@
     /* SIDEBAR */
     .side-card {
       background: linear-gradient(180deg, rgba(17,24,39,.92), rgba(11,18,32,.9));
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      box-shadow: var(--shadow);
-      padding: 24px;
-      margin-bottom: 18px;
+      border: 1px solid var(--line); border-radius: 20px;
+      box-shadow: var(--shadow); padding: 24px; margin-bottom: 18px;
     }
     .side-card h4 {
-      margin: 0 0 16px;
-      font-size: .88rem; font-weight: 800;
-      letter-spacing: .08em; text-transform: uppercase;
-      color: var(--muted);
+      margin: 0 0 16px; font-size: .88rem; font-weight: 800;
+      letter-spacing: .08em; text-transform: uppercase; color: var(--muted);
     }
     .side-row {
       display: flex; justify-content: space-between; align-items: flex-start;
@@ -346,17 +369,10 @@
 
     /* PROGRESS BARS */
     .progress-list { display: grid; gap: 14px }
-    .progress-header {
-      display: flex; justify-content: space-between;
-      margin-bottom: 7px; font-size: .86rem;
-    }
+    .progress-header { display: flex; justify-content: space-between; margin-bottom: 7px; font-size: .86rem }
     .progress-name { font-weight: 600 }
     .progress-pct { color: var(--primary); font-weight: 700 }
-    .progress-bar {
-      height: 6px; border-radius: 999px;
-      background: rgba(255,255,255,.07);
-      overflow: hidden;
-    }
+    .progress-bar { height: 6px; border-radius: 999px; background: rgba(255,255,255,.07); overflow: hidden }
     .progress-fill {
       height: 100%; border-radius: 999px;
       background: linear-gradient(90deg, var(--primary), var(--accent));
@@ -367,76 +383,36 @@
     .trend-chart {
       padding: 20px; border-radius: 18px;
       background: rgba(255,255,255,.035);
-      border: 1px solid rgba(255,255,255,.06);
-      margin-top: 18px;
+      border: 1px solid rgba(255,255,255,.06); margin-top: 18px;
     }
-    .trend-header {
-      display: flex; justify-content: space-between; align-items: center;
-      margin-bottom: 20px; gap: 12px;
-    }
+    .trend-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; gap: 12px }
     .trend-title { font-weight: 700; font-size: .95rem }
     .trend-badge {
-      padding: 5px 11px; border-radius: 999px;
-      font-size: .78rem; font-weight: 700;
-      background: rgba(16,185,129,.12);
-      border: 1px solid rgba(16,185,129,.2);
-      color: #a0f4ce;
+      padding: 5px 11px; border-radius: 999px; font-size: .78rem; font-weight: 700;
+      background: rgba(16,185,129,.12); border: 1px solid rgba(16,185,129,.2); color: #a0f4ce;
     }
-    .trend-bars {
-      display: flex; align-items: flex-end; gap: 8px;
-      height: 90px;
-    }
+    .trend-bars { display: flex; align-items: flex-end; gap: 8px; height: 90px }
     .trend-bar-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px }
     .trend-bar {
       width: 100%; border-radius: 8px 8px 4px 4px;
       background: linear-gradient(180deg, rgba(56,189,248,.9), rgba(139,92,246,.8));
-      box-shadow: 0 6px 16px rgba(34,211,238,.1);
-      transition: height 1s ease;
+      box-shadow: 0 6px 16px rgba(34,211,238,.1); transition: height 1s ease;
     }
     .trend-year { font-size: .72rem; color: var(--muted) }
     .trend-val { font-size: .7rem; color: var(--primary); font-weight: 700 }
-    .trend-footer {
-      margin-top: 14px; font-size: .83rem;
-      color: var(--muted); line-height: 1.55;
-    }
-
-    /* DASHBOARD PREVIEW */
-    .dashboard-preview {
-      position: relative; overflow: hidden;
-      border-radius: 16px;
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.08);
-      aspect-ratio: 16/9;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .dashboard-placeholder {
-      text-align: center; padding: 24px;
-    }
-    .dashboard-placeholder .icon { font-size: 2.5rem; margin-bottom: 10px }
-    .dashboard-placeholder p { color: var(--muted); font-size: .88rem; margin: 0 }
+    .trend-footer { margin-top: 14px; font-size: .83rem; color: var(--muted); line-height: 1.55 }
 
     /* FADE */
-    .fade-up {
-      opacity: 0; transform: translateY(22px); transition: .75s ease;
-    }
+    .fade-up { opacity: 0; transform: translateY(22px); transition: .75s ease }
     .fade-up.visible { opacity: 1; transform: translateY(0) }
 
     /* FOOTER */
-    footer {
-      padding: 28px 0 60px;
-      color: var(--muted);
-      border-top: 1px solid rgba(255,255,255,.06);
-    }
-    .footer-wrap {
-      display: flex; align-items: center;
-      justify-content: space-between; gap: 14px; flex-wrap: wrap;
-    }
+    footer { padding: 28px 0 60px; color: var(--muted); border-top: 1px solid rgba(255,255,255,.06) }
+    .footer-wrap { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap }
 
     /* RESPONSIVE */
     @media (max-width: 900px) {
-      .content-layout {
-        grid-template-columns: 1fr;
-      }
+      .content-layout { grid-template-columns: 1fr }
       .side-col { position: static }
       .dimensions-grid { grid-template-columns: 1fr }
     }
@@ -445,6 +421,8 @@
       .hero-stats { gap: 10px }
       .hero-actions { flex-direction: column }
       .hero-actions .btn { width: 100%; justify-content: center }
+      .nav-right { gap: 10px }
+      .back-btn span.back-text { display: none }
     }
   </style>
 </head>
@@ -453,10 +431,29 @@
   <!-- NAV -->
   <nav class="nav">
     <div class="container nav-wrap">
-      <a href="index.html" class="back-btn">
-        ← Volver al portafolio
+
+      <!-- BRAND - igual al index.html -->
+      <a href="index.html" class="brand-link">
+        <div class="brand-avatar">AG</div>
+        <div class="brand-text">
+          <div class="brand-name">Andrés Gutiérrez</div>
+          <div class="brand-role">Data Analyst · BI · Tech Portfolio</div>
+        </div>
       </a>
-      <div class="brand">Andrés Gutiérrez <span>· Data Analyst</span></div>
+
+      <!-- NAV RIGHT: botón volver + selector idioma -->
+      <div class="nav-right">
+        <a href="index.html" class="back-btn">
+          ← <span class="back-text" data-i18n="navBack">Volver al portafolio</span>
+        </a>
+
+        <!-- SELECTOR DE IDIOMA - cápsula ES / EN -->
+        <div class="lang-switcher" role="group" aria-label="Language switcher">
+          <button class="lang-btn" id="btn-es" onclick="setLang('es')" aria-label="Español">ES</button>
+          <button class="lang-btn" id="btn-en" onclick="setLang('en')" aria-label="English">EN</button>
+        </div>
+      </div>
+
     </div>
   </nav>
 
@@ -465,56 +462,55 @@
     <div class="container project-hero-inner">
 
       <div class="project-meta-row fade-up">
-        <span class="meta-chip chip-client">🏛️ MinTIC Colombia</span>
+        <span class="meta-chip chip-client" data-i18n="chipClient">🏛️ MinTIC Colombia</span>
         <span class="meta-chip chip-year">📅 2018 – 2024</span>
-        <span class="meta-chip chip-area">📊 Business Intelligence · Política Pública</span>
+        <span class="meta-chip chip-area" data-i18n="chipArea">📊 Business Intelligence · Política Pública</span>
       </div>
 
       <h1 class="project-title fade-up">
-        Índice de<br/>
-        <span class="gradient">Brecha Digital</span><br/>
-        Colombia 2024
+        <span data-i18n="heroTitle1">Índice de</span><br/>
+        <span class="gradient" data-i18n="heroTitle2">Brecha Digital</span><br/>
+        <span data-i18n="heroTitle3">Colombia 2024</span>
       </h1>
 
-      <p class="project-lead fade-up">
+      <p class="project-lead fade-up" data-i18n="heroLead">
         Análisis multidimensional de la inclusión digital en Colombia desarrollado para el Ministerio TIC. Mide el acceso, adopción y aprovechamiento de las TIC en 33 departamentos durante 7 años, apoyando la formulación de políticas públicas basadas en evidencia.
       </p>
 
       <div class="hero-stats fade-up">
         <div class="stat-pill">
           <strong>12.7%</strong>
-          <small>Reducción acumulada de brecha digital</small>
+          <small data-i18n="stat1">Reducción acumulada de brecha digital</small>
         </div>
         <div class="stat-pill">
           <strong>33</strong>
-          <small>Departamentos analizados</small>
+          <small data-i18n="stat2">Departamentos analizados</small>
         </div>
         <div class="stat-pill">
-          <strong>7 años</strong>
-          <small>Serie histórica 2018–2024</small>
+          <strong>7 <span data-i18n="statYears">años</span></strong>
+          <small data-i18n="stat3">Serie histórica 2018–2024</small>
         </div>
         <div class="stat-pill">
           <strong>4</strong>
-          <small>Dimensiones del índice</small>
+          <small data-i18n="stat4">Dimensiones del índice</small>
         </div>
       </div>
 
       <div class="hero-actions fade-up">
-        <a class="btn btn-primary" href="https://ontic.mintic.gov.co/portal/Secciones/Temas-Macro/Indice-de-Brecha-Digital/384050:Indice-de-Brecha-Digital" target="_blank" rel="noreferrer">
+        <a class="btn btn-primary" href="https://ontic.mintic.gov.co/portal/Secciones/Temas-Macro/Indice-de-Brecha-Digital/384050:Indice-de-Brecha-Digital" target="_blank" rel="noreferrer" data-i18n="btnMintic">
           🏛️ Ver en MinTIC
         </a>
-        <a class="btn btn-ghost" href="#hallazgos">
+        <a class="btn btn-ghost" href="#hallazgos" data-i18n="btnFindings">
           📊 Ver hallazgos
         </a>
         <a class="btn btn-ghost"
             href="https://app.powerbi.com/view?r=eyJrIjoiZjIwOTNlODctY2U1My00ZDJhLTgxY2EtYjhlNjVjMzQ4YjFlIiwidCI6IjY5M2NiZWEwLTRlZjktNDI1NC04OTc3LTc2ZTA1Y2I1ZjU1NiIsImMiOjR9"
-            target="_blank"
-            rel="noreferrer">
+            target="_blank" rel="noreferrer" data-i18n="btnDashboard">
             📈 Dashboard Interactivo
         </a>
         <a class="btn btn-ghost"
           href="assets/pdf/Boletin_Indice_de_Brecha_Digital_2024.pdf"
-          target="_blank">
+          target="_blank" data-i18n="btnReport">
           📑 Informe Oficial IBD 2024
         </a>
       </div>
@@ -532,13 +528,13 @@
       <div class="section-block fade-up">
         <div class="block-label">
           <div class="block-label-dot"></div>
-          <span>Descripción del proyecto</span>
+          <span data-i18n="secDescLabel">Descripción del proyecto</span>
         </div>
-        <h2 class="block-title">¿Qué es el Índice de Brecha Digital?</h2>
-        <p class="block-text">
+        <h2 class="block-title" data-i18n="secDescTitle">¿Qué es el Índice de Brecha Digital?</h2>
+        <p class="block-text" data-i18n="secDescText1">
           El <strong>Índice de Brecha Digital (IBD)</strong> es una iniciativa analítica de alcance nacional desarrollada para medir y monitorear la inclusión digital en Colombia. Proporciona una evaluación multidimensional de las disparidades digitales entre departamentos y regiones, apoyando la toma de decisiones basada en evidencia para la formulación de políticas públicas y estrategias de transformación digital.
         </p>
-        <p class="block-text">
+        <p class="block-text" data-i18n="secDescText2">
           El índice evalúa cómo los ciudadanos acceden, adoptan y se benefician de las Tecnologías de la Información y las Comunicaciones (TIC), permitiendo identificar desigualdades territoriales y oportunidades de intervención prioritaria.
         </p>
       </div>
@@ -547,33 +543,33 @@
       <div class="section-block fade-up">
         <div class="block-label">
           <div class="block-label-dot"></div>
-          <span>Problema de negocio</span>
+          <span data-i18n="secChallengeLabel">Problema de negocio</span>
         </div>
-        <h2 class="block-title">El desafío analítico</h2>
-        <p class="block-text">
+        <h2 class="block-title" data-i18n="secChallengeTitle">El desafío analítico</h2>
+        <p class="block-text" data-i18n="secChallengeText">
           Colombia enfrenta importantes disparidades territoriales en materia de inclusión digital. Mientras algunas regiones cuentan con altos niveles de conectividad, habilidades digitales y adopción tecnológica, otras continúan enfrentando barreras estructurales que limitan el acceso a las oportunidades digitales.
         </p>
-        <p class="block-text">El Ministerio TIC requería un marco analítico robusto que permitiera:</p>
+        <p class="block-text" data-i18n="secChallengeIntro">El Ministerio TIC requería un marco analítico robusto que permitiera:</p>
         <div style="display:grid;gap:10px;margin-top:14px">
           <div class="finding-item" style="padding:12px 14px">
             <div class="finding-num">01</div>
-            <div class="finding-body"><p>Medir de manera <strong>consistente</strong> la desigualdad digital en todo el país.</p></div>
+            <div class="finding-body"><p data-i18n="challenge1">Medir de manera <strong>consistente</strong> la desigualdad digital en todo el país.</p></div>
           </div>
           <div class="finding-item" style="padding:12px 14px">
             <div class="finding-num">02</div>
-            <div class="finding-body"><p><strong>Comparar departamentos y regiones</strong> mediante indicadores estandarizados y replicables.</p></div>
+            <div class="finding-body"><p data-i18n="challenge2"><strong>Comparar departamentos y regiones</strong> mediante indicadores estandarizados y replicables.</p></div>
           </div>
           <div class="finding-item" style="padding:12px 14px">
             <div class="finding-num">03</div>
-            <div class="finding-body"><p>Identificar los principales <strong>factores de exclusión digital</strong> y sus pesos relativos.</p></div>
+            <div class="finding-body"><p data-i18n="challenge3">Identificar los principales <strong>factores de exclusión digital</strong> y sus pesos relativos.</p></div>
           </div>
           <div class="finding-item" style="padding:12px 14px">
             <div class="finding-num">04</div>
-            <div class="finding-body"><p>Monitorear la <strong>evolución histórica</strong> de la brecha digital entre 2018 y 2024.</p></div>
+            <div class="finding-body"><p data-i18n="challenge4">Monitorear la <strong>evolución histórica</strong> de la brecha digital entre 2018 y 2024.</p></div>
           </div>
           <div class="finding-item" style="padding:12px 14px">
             <div class="finding-num">05</div>
-            <div class="finding-body"><p>Apoyar el <strong>diseño de políticas públicas</strong> y la priorización estratégica de inversiones.</p></div>
+            <div class="finding-body"><p data-i18n="challenge5">Apoyar el <strong>diseño de políticas públicas</strong> y la priorización estratégica de inversiones.</p></div>
           </div>
         </div>
       </div>
@@ -582,59 +578,59 @@
       <div class="section-block fade-up">
         <div class="block-label">
           <div class="block-label-dot"></div>
-          <span>Metodología</span>
+          <span data-i18n="secMethodLabel">Metodología</span>
         </div>
-        <h2 class="block-title">Las 4 dimensiones del índice</h2>
-        <p class="block-text">
+        <h2 class="block-title" data-i18n="secMethodTitle">Las 4 dimensiones del índice</h2>
+        <p class="block-text" data-i18n="secMethodText">
           El IBD fue construido a partir de cuatro dimensiones principales. Cada una fue <strong>normalizada, ponderada e integrada</strong> en un índice compuesto con valores entre 0 y 1, donde los valores más bajos representan menores niveles de brecha digital.
         </p>
 
         <div class="dimensions-grid">
           <div class="dim-card">
             <div class="dim-icon">💡</div>
-            <div class="dim-title">Motivación</div>
-            <div class="dim-pct">Dim. 1</div>
-            <p class="dim-text">Disposición e interés de los ciudadanos para adoptar tecnologías digitales.</p>
+            <div class="dim-title" data-i18n="dim1Title">Motivación</div>
+            <div class="dim-pct" data-i18n="dim1Label">Dim. 1</div>
+            <p class="dim-text" data-i18n="dim1Desc">Disposición e interés de los ciudadanos para adoptar tecnologías digitales.</p>
             <ul class="dim-bullets">
-              <li>Utilidad percibida del internet</li>
-              <li>Interés en adquirir dispositivos</li>
-              <li>Barreras de costo o falta de interés</li>
+              <li data-i18n="dim1b1">Utilidad percibida del internet</li>
+              <li data-i18n="dim1b2">Interés en adquirir dispositivos</li>
+              <li data-i18n="dim1b3">Barreras de costo o falta de interés</li>
             </ul>
           </div>
 
           <div class="dim-card">
             <div class="dim-icon">📡</div>
-            <div class="dim-title">Acceso Material</div>
-            <div class="dim-pct">Dim. 2</div>
-            <p class="dim-text">Disponibilidad de infraestructura y recursos tecnológicos en el territorio.</p>
+            <div class="dim-title" data-i18n="dim2Title">Acceso Material</div>
+            <div class="dim-pct" data-i18n="dim2Label">Dim. 2</div>
+            <p class="dim-text" data-i18n="dim2Desc">Disponibilidad de infraestructura y recursos tecnológicos en el territorio.</p>
             <ul class="dim-bullets">
-              <li>Acceso a internet en hogares</li>
-              <li>Tenencia de computadores</li>
-              <li>Calidad y velocidad de banda ancha</li>
+              <li data-i18n="dim2b1">Acceso a internet en hogares</li>
+              <li data-i18n="dim2b2">Tenencia de computadores</li>
+              <li data-i18n="dim2b3">Calidad y velocidad de banda ancha</li>
             </ul>
           </div>
 
           <div class="dim-card" style="border-color:rgba(139,92,246,.18)">
             <div class="dim-icon">🎓</div>
-            <div class="dim-title">Habilidades Digitales</div>
-            <div class="dim-pct" style="background:rgba(139,92,246,.12);border-color:rgba(139,92,246,.2);color:#c9b4ff">35% del índice</div>
-            <p class="dim-text"><strong style="color:var(--text)">Principal factor de la brecha.</strong> Capacidad para usar eficazmente las tecnologías digitales.</p>
+            <div class="dim-title" data-i18n="dim3Title">Habilidades Digitales</div>
+            <div class="dim-pct" style="background:rgba(139,92,246,.12);border-color:rgba(139,92,246,.2);color:#c9b4ff" data-i18n="dim3Label">35% del índice</div>
+            <p class="dim-text"><strong style="color:var(--text)" data-i18n="dim3Strong">Principal factor de la brecha.</strong> <span data-i18n="dim3Desc">Capacidad para usar eficazmente las tecnologías digitales.</span></p>
             <ul class="dim-bullets">
-              <li>Competencias digitales básicas y avanzadas</li>
-              <li>Nivel educativo alcanzado</li>
-              <li>Capacidades de programación</li>
+              <li data-i18n="dim3b1">Competencias digitales básicas y avanzadas</li>
+              <li data-i18n="dim3b2">Nivel educativo alcanzado</li>
+              <li data-i18n="dim3b3">Capacidades de programación</li>
             </ul>
           </div>
 
           <div class="dim-card">
             <div class="dim-icon">📱</div>
-            <div class="dim-title">Aprovechamiento</div>
-            <div class="dim-pct">Dim. 4</div>
-            <p class="dim-text">Forma en que la tecnología es utilizada en la vida cotidiana.</p>
+            <div class="dim-title" data-i18n="dim4Title">Aprovechamiento</div>
+            <div class="dim-pct" data-i18n="dim4Label">Dim. 4</div>
+            <p class="dim-text" data-i18n="dim4Desc">Forma en que la tecnología es utilizada en la vida cotidiana.</p>
             <ul class="dim-bullets">
-              <li>Frecuencia de uso de internet</li>
-              <li>Diversidad de actividades en línea</li>
-              <li>Uso de dispositivos móviles</li>
+              <li data-i18n="dim4b1">Frecuencia de uso de internet</li>
+              <li data-i18n="dim4b2">Diversidad de actividades en línea</li>
+              <li data-i18n="dim4b3">Uso de dispositivos móviles</li>
             </ul>
           </div>
         </div>
@@ -644,43 +640,43 @@
       <div class="section-block fade-up" id="hallazgos">
         <div class="block-label">
           <div class="block-label-dot"></div>
-          <span>Hallazgos principales</span>
+          <span data-i18n="secFindingsLabel">Hallazgos principales</span>
         </div>
-        <h2 class="block-title">Insights estratégicos</h2>
+        <h2 class="block-title" data-i18n="secFindingsTitle">Insights estratégicos</h2>
 
         <div class="findings-list">
           <div class="finding-item">
             <div class="finding-num">1</div>
             <div class="finding-body">
-              <strong>Mejora Nacional en la Inclusión Digital</strong>
-              <p>El Índice de Brecha Digital nacional disminuyó de <strong>0.440 en 2018 a 0.384 en 2024</strong>, representando una reducción acumulada aproximada del 12.7%, evidenciando avances sostenidos en políticas de inclusión digital.</p>
-              <span class="finding-highlight">↓ 0.056 puntos en 7 años</span>
+              <strong data-i18n="f1Title">Mejora Nacional en la Inclusión Digital</strong>
+              <p data-i18n="f1Text">El Índice de Brecha Digital nacional disminuyó de <strong>0.440 en 2018 a 0.384 en 2024</strong>, representando una reducción acumulada aproximada del 12.7%, evidenciando avances sostenidos en políticas de inclusión digital.</p>
+              <span class="finding-highlight" data-i18n="f1Badge">↓ 0.056 puntos en 7 años</span>
             </div>
           </div>
 
           <div class="finding-item">
             <div class="finding-num">2</div>
             <div class="finding-body">
-              <strong>Disparidades Territoriales Significativas</strong>
-              <p>Bogotá registró los niveles más bajos de brecha digital del país, mientras que la región <strong>Orinoquía–Amazonía</strong> continuó presentando los mayores niveles de exclusión digital, evidenciando una marcada desigualdad territorial.</p>
+              <strong data-i18n="f2Title">Disparidades Territoriales Significativas</strong>
+              <p data-i18n="f2Text">Bogotá registró los niveles más bajos de brecha digital del país, mientras que la región <strong>Orinoquía–Amazonía</strong> continuó presentando los mayores niveles de exclusión digital, evidenciando una marcada desigualdad territorial.</p>
             </div>
           </div>
 
           <div class="finding-item" style="border-color:rgba(139,92,246,.2)">
             <div class="finding-num" style="background:linear-gradient(135deg,rgba(139,92,246,.2),rgba(56,189,248,.15));color:#c9b4ff">3</div>
             <div class="finding-body">
-              <strong>Habilidades Digitales: El Principal Desafío ⚠️</strong>
-              <p>La dimensión de <strong>Habilidades Digitales</strong> representó la mayor contribución al índice, explicando aproximadamente el <strong>35% de la brecha total</strong>. Este hallazgo resalta la importancia de invertir en alfabetización digital, no solo en conectividad.</p>
-              <span class="finding-highlight" style="background:rgba(139,92,246,.12);border-color:rgba(139,92,246,.22);color:#c9b4ff">35% de la brecha total</span>
+              <strong data-i18n="f3Title">Habilidades Digitales: El Principal Desafío ⚠️</strong>
+              <p data-i18n="f3Text">La dimensión de <strong>Habilidades Digitales</strong> representó la mayor contribución al índice, explicando aproximadamente el <strong>35% de la brecha total</strong>. Este hallazgo resalta la importancia de invertir en alfabetización digital, no solo en conectividad.</p>
+              <span class="finding-highlight" style="background:rgba(139,92,246,.12);border-color:rgba(139,92,246,.22);color:#c9b4ff" data-i18n="f3Badge">35% de la brecha total</span>
             </div>
           </div>
 
           <div class="finding-item">
             <div class="finding-num">4</div>
             <div class="finding-body">
-              <strong>Caso de Éxito: San Andrés</strong>
-              <p><strong>San Andrés</strong> mostró una de las mejoras más significativas entre 2023 y 2024, evidenciando que las intervenciones focalizadas y las inversiones dirigidas pueden generar cambios relevantes en períodos cortos.</p>
-              <span class="finding-highlight">Mejor progreso 2023–2024</span>
+              <strong data-i18n="f4Title">Caso de Éxito: San Andrés</strong>
+              <p data-i18n="f4Text"><strong>San Andrés</strong> mostró una de las mejoras más significativas entre 2023 y 2024, evidenciando que las intervenciones focalizadas y las inversiones dirigidas pueden generar cambios relevantes en períodos cortos.</p>
+              <span class="finding-highlight" data-i18n="f4Badge">Mejor progreso 2023–2024</span>
             </div>
           </div>
         </div>
@@ -688,13 +684,11 @@
         <!-- Gráfico de tendencia visual -->
         <div class="trend-chart">
           <div class="trend-header">
-            <div class="trend-title">📉 Evolución del IBD Nacional (2018–2024)</div>
-            <div class="trend-badge">↓ 12.7% acumulado</div>
+            <div class="trend-title" data-i18n="chartTitle">📉 Evolución del IBD Nacional (2018–2024)</div>
+            <div class="trend-badge" data-i18n="chartBadge">↓ 12.7% acumulado</div>
           </div>
-          <div class="trend-bars" id="trendBars">
-            <!-- generado por JS -->
-          </div>
-          <p class="trend-footer">
+          <div class="trend-bars" id="trendBars"></div>
+          <p class="trend-footer" data-i18n="chartFooter">
             Índice compuesto normalizado (0–1). Valores más bajos indican menor brecha digital.<br/>
             Fuente: DANE · PRST · MinEducación · ENPH
           </p>
@@ -705,38 +699,38 @@
       <div class="section-block fade-up">
         <div class="block-label">
           <div class="block-label-dot"></div>
-          <span>Fuentes de datos</span>
+          <span data-i18n="secSourcesLabel">Fuentes de datos</span>
         </div>
-        <h2 class="block-title">Integración de fuentes oficiales</h2>
-        <p class="block-text">El análisis integró información proveniente de diversas entidades oficiales colombianas para construir un índice robusto y representativo a nivel nacional.</p>
+        <h2 class="block-title" data-i18n="secSourcesTitle">Integración de fuentes oficiales</h2>
+        <p class="block-text" data-i18n="secSourcesText">El análisis integró información proveniente de diversas entidades oficiales colombianas para construir un índice robusto y representativo a nivel nacional.</p>
 
         <div class="sources-grid">
           <div class="source-item">
             <div class="source-icon">📊</div>
             <div>
-              <div class="source-name">DANE – Encuesta Nacional de Calidad de Vida</div>
-              <div class="source-desc">Acceso a internet, tenencia de dispositivos, adopción tecnológica y condiciones digitales de los hogares colombianos.</div>
+              <div class="source-name" data-i18n="src1Name">DANE – Encuesta Nacional de Calidad de Vida</div>
+              <div class="source-desc" data-i18n="src1Desc">Acceso a internet, tenencia de dispositivos, adopción tecnológica y condiciones digitales de los hogares colombianos.</div>
             </div>
           </div>
           <div class="source-item">
             <div class="source-icon">📡</div>
             <div>
-              <div class="source-name">PRST – Proveedores de Redes y Servicios de Telecomunicaciones</div>
-              <div class="source-desc">Indicadores de conectividad, cobertura e infraestructura de telecomunicaciones por departamento.</div>
+              <div class="source-name" data-i18n="src2Name">PRST – Proveedores de Redes y Servicios de Telecomunicaciones</div>
+              <div class="source-desc" data-i18n="src2Desc">Indicadores de conectividad, cobertura e infraestructura de telecomunicaciones por departamento.</div>
             </div>
           </div>
           <div class="source-item">
             <div class="source-icon">🎓</div>
             <div>
-              <div class="source-name">Ministerio de Educación Nacional</div>
-              <div class="source-desc">Indicadores educativos asociados al desarrollo de habilidades digitales y nivel de escolaridad.</div>
+              <div class="source-name" data-i18n="src3Name">Ministerio de Educación Nacional</div>
+              <div class="source-desc" data-i18n="src3Desc">Indicadores educativos asociados al desarrollo de habilidades digitales y nivel de escolaridad.</div>
             </div>
           </div>
           <div class="source-item">
             <div class="source-icon">💰</div>
             <div>
-              <div class="source-name">Encuesta Nacional de Presupuesto de los Hogares</div>
-              <div class="source-desc">Variables socioeconómicas relacionadas con el acceso y la asequibilidad de tecnología.</div>
+              <div class="source-name" data-i18n="src4Name">Encuesta Nacional de Presupuesto de los Hogares</div>
+              <div class="source-desc" data-i18n="src4Desc">Variables socioeconómicas relacionadas con el acceso y la asequibilidad de tecnología.</div>
             </div>
           </div>
         </div>
@@ -746,50 +740,50 @@
       <div class="section-block fade-up">
         <div class="block-label">
           <div class="block-label-dot"></div>
-          <span>Mi contribución</span>
+          <span data-i18n="secRoleLabel">Mi contribución</span>
         </div>
-        <h2 class="block-title">Rol en el proyecto</h2>
+        <h2 class="block-title" data-i18n="secRoleTitle">Rol en el proyecto</h2>
         <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px">
           <div class="source-item">
             <div class="source-icon">🔧</div>
             <div>
-              <div class="source-name">Preparación y validación de datos</div>
-              <div class="source-desc">Integración y limpieza de múltiples fuentes oficiales.</div>
+              <div class="source-name" data-i18n="role1Name">Preparación y validación de datos</div>
+              <div class="source-desc" data-i18n="role1Desc">Integración y limpieza de múltiples fuentes oficiales.</div>
             </div>
           </div>
           <div class="source-item">
             <div class="source-icon">📐</div>
             <div>
-              <div class="source-name">Construcción de indicadores</div>
-              <div class="source-desc">Diseño del índice compuesto y normalización de dimensiones.</div>
+              <div class="source-name" data-i18n="role2Name">Construcción de indicadores</div>
+              <div class="source-desc" data-i18n="role2Desc">Diseño del índice compuesto y normalización de dimensiones.</div>
             </div>
           </div>
           <div class="source-item">
             <div class="source-icon">📊</div>
             <div>
-              <div class="source-name">Dashboard Power BI</div>
-              <div class="source-desc">Desarrollo de tableros interactivos para tomadores de decisión.</div>
+              <div class="source-name" data-i18n="role3Name">Dashboard Power BI</div>
+              <div class="source-desc" data-i18n="role3Desc">Desarrollo de tableros interactivos para tomadores de decisión.</div>
             </div>
           </div>
           <div class="source-item">
             <div class="source-icon">🗺️</div>
             <div>
-              <div class="source-name">Visualización geográfica</div>
-              <div class="source-desc">Mapas departamentales, ranking y análisis de tendencias.</div>
+              <div class="source-name" data-i18n="role4Name">Visualización geográfica</div>
+              <div class="source-desc" data-i18n="role4Desc">Mapas departamentales, ranking y análisis de tendencias.</div>
             </div>
           </div>
           <div class="source-item">
             <div class="source-icon">📝</div>
             <div>
-              <div class="source-name">Reportes ejecutivos</div>
-              <div class="source-desc">Storytelling y hallazgos estratégicos para tomadores de decisión.</div>
+              <div class="source-name" data-i18n="role5Name">Reportes ejecutivos</div>
+              <div class="source-desc" data-i18n="role5Desc">Storytelling y hallazgos estratégicos para tomadores de decisión.</div>
             </div>
           </div>
           <div class="source-item">
             <div class="source-icon">🎯</div>
             <div>
-              <div class="source-name">Identificación de patrones</div>
-              <div class="source-desc">Análisis territorial y detección de regiones prioritarias.</div>
+              <div class="source-name" data-i18n="role6Name">Identificación de patrones</div>
+              <div class="source-desc" data-i18n="role6Desc">Análisis territorial y detección de regiones prioritarias.</div>
             </div>
           </div>
         </div>
@@ -802,32 +796,32 @@
 
       <!-- DETALLES DEL PROYECTO -->
       <div class="side-card fade-up">
-        <h4>Detalles del proyecto</h4>
+        <h4 data-i18n="sideDetailsTitle">Detalles del proyecto</h4>
         <div class="side-row">
-          <span class="side-label">Cliente</span>
+          <span class="side-label" data-i18n="sideClient">Cliente</span>
           <span class="side-value">MinTIC Colombia</span>
         </div>
         <div class="side-row">
-          <span class="side-label">Período</span>
+          <span class="side-label" data-i18n="sidePeriod">Período</span>
           <span class="side-value">2018 – 2024</span>
         </div>
         <div class="side-row">
-          <span class="side-label">Alcance</span>
-          <span class="side-value">33 departamentos</span>
+          <span class="side-label" data-i18n="sideScope">Alcance</span>
+          <span class="side-value" data-i18n="sideScopeVal">33 departamentos</span>
         </div>
         <div class="side-row">
-          <span class="side-label">Tipo</span>
-          <span class="side-value">Política pública · BI</span>
+          <span class="side-label" data-i18n="sideType">Tipo</span>
+          <span class="side-value" data-i18n="sideTypeVal">Política pública · BI</span>
         </div>
         <div class="side-row">
-          <span class="side-label">Rol</span>
+          <span class="side-label" data-i18n="sideRole">Rol</span>
           <span class="side-value">Data Analyst</span>
         </div>
       </div>
 
       <!-- HERRAMIENTAS -->
       <div class="side-card fade-up">
-        <h4>Stack tecnológico</h4>
+        <h4 data-i18n="sideStackTitle">Stack tecnológico</h4>
         <div class="tech-stack">
           <div class="tech-badge"><span>📊</span> Power BI</div>
           <div class="tech-badge"><span>🔢</span> DAX</div>
@@ -839,57 +833,56 @@
 
       <!-- DIMENSIONES - BARRAS -->
       <div class="side-card fade-up">
-        <h4>FACTORES DE LA BRECHA DIGITAL</h4>
+        <h4 data-i18n="sideFactorsTitle">FACTORES DE LA BRECHA DIGITAL</h4>
         <div class="progress-list">
           <div class="progress-item">
             <div class="progress-header">
-              <span class="progress-name">Habilidades Digitales</span>
+              <span class="progress-name" data-i18n="prog1">Habilidades Digitales</span>
               <span class="progress-pct">35%</span>
             </div>
-            <div class="progress-bar"><div class="progress-fill" style="width:35%"></div></div>
+            <div class="progress-bar"><div class="progress-fill" data-width="35%" style="width:0%"></div></div>
           </div>
           <div class="progress-item">
             <div class="progress-header">
-              <span class="progress-name">Acceso Material</span>
+              <span class="progress-name" data-i18n="prog2">Acceso Material</span>
               <span class="progress-pct">28%</span>
             </div>
-            <div class="progress-bar"><div class="progress-fill" style="width:28%"></div></div>
+            <div class="progress-bar"><div class="progress-fill" data-width="28%" style="width:0%"></div></div>
           </div>
           <div class="progress-item">
             <div class="progress-header">
-              <span class="progress-name">Aprovechamiento</span>
+              <span class="progress-name" data-i18n="prog3">Aprovechamiento</span>
               <span class="progress-pct">22%</span>
             </div>
-            <div class="progress-bar"><div class="progress-fill" style="width:22%"></div></div>
+            <div class="progress-bar"><div class="progress-fill" data-width="22%" style="width:0%"></div></div>
           </div>
           <div class="progress-item">
             <div class="progress-header">
-              <span class="progress-name">Motivación</span>
+              <span class="progress-name" data-i18n="prog4">Motivación</span>
               <span class="progress-pct">15%</span>
             </div>
-            <div class="progress-bar"><div class="progress-fill" style="width:15%"></div></div>
+            <div class="progress-bar"><div class="progress-fill" data-width="15%" style="width:0%"></div></div>
           </div>
         </div>
-        <p style="font-size:.78rem;color:var(--muted);margin:12px 0 0;line-height:1.5">
+        <p style="font-size:.78rem;color:var(--muted);margin:12px 0 0;line-height:1.5" data-i18n="sideFactorsNote">
           * Principales dimensiones analizadas para evaluar la brecha digital en Colombia.
         </p>
       </div>
 
       <!-- CTA CONTACTO -->
       <div class="side-card fade-up" style="background:linear-gradient(135deg,rgba(56,189,248,.08),rgba(139,92,246,.08));border-color:rgba(56,189,248,.15)">
-        <h4 style="color:var(--primary)">¿Interesado en este análisis?</h4>
-        <p style="font-size:.88rem;color:var(--muted);margin:0 0 14px;line-height:1.6">
+        <h4 style="color:var(--primary)" data-i18n="sideCtaTitle">¿Interesado en este análisis?</h4>
+        <p style="font-size:.88rem;color:var(--muted);margin:0 0 14px;line-height:1.6" data-i18n="sideCtaText">
           Puedo desarrollar soluciones similares para tu organización o contarte más sobre la metodología.
         </p>
         <a class="btn btn-ghost"
           href="http://wa.me/573113648276"
-          target="_blank"
-          rel="noreferrer"
-          data-i18n="contactWhatsapp"
-          style="width:100%;justify-content:center;">
+          target="_blank" rel="noreferrer"
+          style="width:100%;justify-content:center;" data-i18n="contactWhatsapp">
           WhatsApp
         </a>
-        <a class="btn btn-ghost" href="https://linkedin.com/in/andresgutierrez06/" target="_blank" rel="noreferrer" style="width:100%;justify-content:center;margin-top:10px">
+        <a class="btn btn-ghost" href="https://linkedin.com/in/andresgutierrez06/" target="_blank" rel="noreferrer"
+          style="width:100%;justify-content:center;margin-top:10px">
           LinkedIn
         </a>
       </div>
@@ -901,16 +894,291 @@
   <footer>
     <div class="container footer-wrap">
       <div>© <span id="year"></span> Andrés Felipe Gutiérrez Díaz · Data Analyst</div>
-      <a href="index.html" style="color:var(--muted)">← Volver al portafolio</a>
+      <a href="index.html" style="color:var(--muted)" data-i18n="footerBack">← Volver al portafolio</a>
     </div>
   </footer>
 
   <script>
+    /* =====================================================
+       SISTEMA DE TRADUCCIÓN
+       - Lee el idioma guardado en localStorage (clave: "lang")
+         igual que lo hace el index.html principal
+       - Si no hay nada guardado, detecta el idioma del navegador
+       - El selector ES/EN guarda en localStorage y aplica
+         el idioma en tiempo real, sin recargar la página
+    ===================================================== */
+
+    const TRANSLATIONS = {
+      es: {
+        /* NAV */
+        navBack: "Volver al portafolio",
+        /* CHIPS */
+        chipClient: "🏛️ MinTIC Colombia",
+        chipArea: "📊 Business Intelligence · Política Pública",
+        /* HERO */
+        heroTitle1: "Índice de",
+        heroTitle2: "Brecha Digital",
+        heroTitle3: "Colombia 2024",
+        heroLead: "Análisis multidimensional de la inclusión digital en Colombia desarrollado para el Ministerio TIC. Mide el acceso, adopción y aprovechamiento de las TIC en 33 departamentos durante 7 años, apoyando la formulación de políticas públicas basadas en evidencia.",
+        stat1: "Reducción acumulada de brecha digital",
+        stat2: "Departamentos analizados",
+        statYears: "años",
+        stat3: "Serie histórica 2018–2024",
+        stat4: "Dimensiones del índice",
+        btnMintic: "🏛️ Ver en MinTIC",
+        btnFindings: "📊 Ver hallazgos",
+        btnDashboard: "📈 Dashboard Interactivo",
+        btnReport: "📑 Informe Oficial IBD 2024",
+        /* DESCRIPCIÓN */
+        secDescLabel: "Descripción del proyecto",
+        secDescTitle: "¿Qué es el Índice de Brecha Digital?",
+        secDescText1: 'El <strong>Índice de Brecha Digital (IBD)</strong> es una iniciativa analítica de alcance nacional desarrollada para medir y monitorear la inclusión digital en Colombia. Proporciona una evaluación multidimensional de las disparidades digitales entre departamentos y regiones, apoyando la toma de decisiones basada en evidencia para la formulación de políticas públicas y estrategias de transformación digital.',
+        secDescText2: "El índice evalúa cómo los ciudadanos acceden, adoptan y se benefician de las Tecnologías de la Información y las Comunicaciones (TIC), permitiendo identificar desigualdades territoriales y oportunidades de intervención prioritaria.",
+        /* DESAFÍO */
+        secChallengeLabel: "Problema de negocio",
+        secChallengeTitle: "El desafío analítico",
+        secChallengeText: "Colombia enfrenta importantes disparidades territoriales en materia de inclusión digital. Mientras algunas regiones cuentan con altos niveles de conectividad, habilidades digitales y adopción tecnológica, otras continúan enfrentando barreras estructurales que limitan el acceso a las oportunidades digitales.",
+        secChallengeIntro: "El Ministerio TIC requería un marco analítico robusto que permitiera:",
+        challenge1: "Medir de manera <strong>consistente</strong> la desigualdad digital en todo el país.",
+        challenge2: "<strong>Comparar departamentos y regiones</strong> mediante indicadores estandarizados y replicables.",
+        challenge3: "Identificar los principales <strong>factores de exclusión digital</strong> y sus pesos relativos.",
+        challenge4: "Monitorear la <strong>evolución histórica</strong> de la brecha digital entre 2018 y 2024.",
+        challenge5: "Apoyar el <strong>diseño de políticas públicas</strong> y la priorización estratégica de inversiones.",
+        /* METODOLOGÍA */
+        secMethodLabel: "Metodología",
+        secMethodTitle: "Las 4 dimensiones del índice",
+        secMethodText: "El IBD fue construido a partir de cuatro dimensiones principales. Cada una fue <strong>normalizada, ponderada e integrada</strong> en un índice compuesto con valores entre 0 y 1, donde los valores más bajos representan menores niveles de brecha digital.",
+        dim1Title: "Motivación", dim1Label: "Dim. 1",
+        dim1Desc: "Disposición e interés de los ciudadanos para adoptar tecnologías digitales.",
+        dim1b1: "Utilidad percibida del internet", dim1b2: "Interés en adquirir dispositivos", dim1b3: "Barreras de costo o falta de interés",
+        dim2Title: "Acceso Material", dim2Label: "Dim. 2",
+        dim2Desc: "Disponibilidad de infraestructura y recursos tecnológicos en el territorio.",
+        dim2b1: "Acceso a internet en hogares", dim2b2: "Tenencia de computadores", dim2b3: "Calidad y velocidad de banda ancha",
+        dim3Title: "Habilidades Digitales", dim3Label: "35% del índice",
+        dim3Strong: "Principal factor de la brecha.",
+        dim3Desc: "Capacidad para usar eficazmente las tecnologías digitales.",
+        dim3b1: "Competencias digitales básicas y avanzadas", dim3b2: "Nivel educativo alcanzado", dim3b3: "Capacidades de programación",
+        dim4Title: "Aprovechamiento", dim4Label: "Dim. 4",
+        dim4Desc: "Forma en que la tecnología es utilizada en la vida cotidiana.",
+        dim4b1: "Frecuencia de uso de internet", dim4b2: "Diversidad de actividades en línea", dim4b3: "Uso de dispositivos móviles",
+        /* HALLAZGOS */
+        secFindingsLabel: "Hallazgos principales",
+        secFindingsTitle: "Insights estratégicos",
+        f1Title: "Mejora Nacional en la Inclusión Digital",
+        f1Text: "El Índice de Brecha Digital nacional disminuyó de <strong>0.440 en 2018 a 0.384 en 2024</strong>, representando una reducción acumulada aproximada del 12.7%, evidenciando avances sostenidos en políticas de inclusión digital.",
+        f1Badge: "↓ 0.056 puntos en 7 años",
+        f2Title: "Disparidades Territoriales Significativas",
+        f2Text: "Bogotá registró los niveles más bajos de brecha digital del país, mientras que la región <strong>Orinoquía–Amazonía</strong> continuó presentando los mayores niveles de exclusión digital, evidenciando una marcada desigualdad territorial.",
+        f3Title: "Habilidades Digitales: El Principal Desafío ⚠️",
+        f3Text: "La dimensión de <strong>Habilidades Digitales</strong> representó la mayor contribución al índice, explicando aproximadamente el <strong>35% de la brecha total</strong>. Este hallazgo resalta la importancia de invertir en alfabetización digital, no solo en conectividad.",
+        f3Badge: "35% de la brecha total",
+        f4Title: "Caso de Éxito: San Andrés",
+        f4Text: "<strong>San Andrés</strong> mostró una de las mejoras más significativas entre 2023 y 2024, evidenciando que las intervenciones focalizadas y las inversiones dirigidas pueden generar cambios relevantes en períodos cortos.",
+        f4Badge: "Mejor progreso 2023–2024",
+        chartTitle: "📉 Evolución del IBD Nacional (2018–2024)",
+        chartBadge: "↓ 12.7% acumulado",
+        chartFooter: "Índice compuesto normalizado (0–1). Valores más bajos indican menor brecha digital.<br/>Fuente: DANE · PRST · MinEducación · ENPH",
+        /* FUENTES */
+        secSourcesLabel: "Fuentes de datos",
+        secSourcesTitle: "Integración de fuentes oficiales",
+        secSourcesText: "El análisis integró información proveniente de diversas entidades oficiales colombianas para construir un índice robusto y representativo a nivel nacional.",
+        src1Name: "DANE – Encuesta Nacional de Calidad de Vida",
+        src1Desc: "Acceso a internet, tenencia de dispositivos, adopción tecnológica y condiciones digitales de los hogares colombianos.",
+        src2Name: "PRST – Proveedores de Redes y Servicios de Telecomunicaciones",
+        src2Desc: "Indicadores de conectividad, cobertura e infraestructura de telecomunicaciones por departamento.",
+        src3Name: "Ministerio de Educación Nacional",
+        src3Desc: "Indicadores educativos asociados al desarrollo de habilidades digitales y nivel de escolaridad.",
+        src4Name: "Encuesta Nacional de Presupuesto de los Hogares",
+        src4Desc: "Variables socioeconómicas relacionadas con el acceso y la asequibilidad de tecnología.",
+        /* ROL */
+        secRoleLabel: "Mi contribución",
+        secRoleTitle: "Rol en el proyecto",
+        role1Name: "Preparación y validación de datos", role1Desc: "Integración y limpieza de múltiples fuentes oficiales.",
+        role2Name: "Construcción de indicadores", role2Desc: "Diseño del índice compuesto y normalización de dimensiones.",
+        role3Name: "Dashboard Power BI", role3Desc: "Desarrollo de tableros interactivos para tomadores de decisión.",
+        role4Name: "Visualización geográfica", role4Desc: "Mapas departamentales, ranking y análisis de tendencias.",
+        role5Name: "Reportes ejecutivos", role5Desc: "Storytelling y hallazgos estratégicos para tomadores de decisión.",
+        role6Name: "Identificación de patrones", role6Desc: "Análisis territorial y detección de regiones prioritarias.",
+        /* SIDEBAR */
+        sideDetailsTitle: "Detalles del proyecto",
+        sideClient: "Cliente", sidePeriod: "Período", sideScope: "Alcance",
+        sideScopeVal: "33 departamentos", sideType: "Tipo",
+        sideTypeVal: "Política pública · BI", sideRole: "Rol",
+        sideStackTitle: "Stack tecnológico",
+        sideFactorsTitle: "FACTORES DE LA BRECHA DIGITAL",
+        prog1: "Habilidades Digitales", prog2: "Acceso Material",
+        prog3: "Aprovechamiento", prog4: "Motivación",
+        sideFactorsNote: "* Principales dimensiones analizadas para evaluar la brecha digital en Colombia.",
+        sideCtaTitle: "¿Interesado en este análisis?",
+        sideCtaText: "Puedo desarrollar soluciones similares para tu organización o contarte más sobre la metodología.",
+        contactWhatsapp: "WhatsApp",
+        /* FOOTER */
+        footerBack: "← Volver al portafolio",
+      },
+
+      en: {
+        /* NAV */
+        navBack: "Back to portfolio",
+        /* CHIPS */
+        chipClient: "🏛️ MinTIC Colombia",
+        chipArea: "📊 Business Intelligence · Public Policy",
+        /* HERO */
+        heroTitle1: "Digital Divide",
+        heroTitle2: "Index Colombia",
+        heroTitle3: "2024",
+        heroLead: "Multidimensional analysis of digital inclusion in Colombia developed for the Ministry of ICT. Measures access, adoption and use of ICT across 33 departments over 7 years, supporting evidence-based public policy formulation.",
+        stat1: "Cumulative digital divide reduction",
+        stat2: "Departments analyzed",
+        statYears: "years",
+        stat3: "Historical series 2018–2024",
+        stat4: "Index dimensions",
+        btnMintic: "🏛️ View at MinTIC",
+        btnFindings: "📊 View findings",
+        btnDashboard: "📈 Interactive Dashboard",
+        btnReport: "📑 Official IBD 2024 Report",
+        /* DESCRIPTION */
+        secDescLabel: "Project description",
+        secDescTitle: "What is the Digital Divide Index?",
+        secDescText1: 'The <strong>Digital Divide Index (IBD)</strong> is a national-scale analytical initiative developed to measure and monitor digital inclusion in Colombia. It provides a multidimensional assessment of digital disparities between departments and regions, supporting evidence-based decision-making for public policy formulation and digital transformation strategies.',
+        secDescText2: "The index evaluates how citizens access, adopt and benefit from Information and Communication Technologies (ICT), enabling the identification of territorial inequalities and priority intervention opportunities.",
+        /* CHALLENGE */
+        secChallengeLabel: "Business problem",
+        secChallengeTitle: "The analytical challenge",
+        secChallengeText: "Colombia faces significant territorial disparities in digital inclusion. While some regions have high levels of connectivity, digital skills and technology adoption, others continue to face structural barriers that limit access to digital opportunities.",
+        secChallengeIntro: "The Ministry of ICT required a robust analytical framework that would allow:",
+        challenge1: "Measuring <strong>consistently</strong> digital inequality across the country.",
+        challenge2: "<strong>Comparing departments and regions</strong> through standardized and replicable indicators.",
+        challenge3: "Identifying the main <strong>digital exclusion factors</strong> and their relative weights.",
+        challenge4: "Monitoring the <strong>historical evolution</strong> of the digital divide between 2018 and 2024.",
+        challenge5: "Supporting the <strong>design of public policies</strong> and strategic prioritization of investments.",
+        /* METHODOLOGY */
+        secMethodLabel: "Methodology",
+        secMethodTitle: "The 4 dimensions of the index",
+        secMethodText: "The IBD was built from four main dimensions. Each was <strong>normalized, weighted and integrated</strong> into a composite index with values between 0 and 1, where lower values represent lower levels of digital divide.",
+        dim1Title: "Motivation", dim1Label: "Dim. 1",
+        dim1Desc: "Citizens' willingness and interest in adopting digital technologies.",
+        dim1b1: "Perceived usefulness of the internet", dim1b2: "Interest in acquiring devices", dim1b3: "Cost barriers or lack of interest",
+        dim2Title: "Material Access", dim2Label: "Dim. 2",
+        dim2Desc: "Availability of infrastructure and technological resources in the territory.",
+        dim2b1: "Internet access in households", dim2b2: "Computer ownership", dim2b3: "Broadband quality and speed",
+        dim3Title: "Digital Skills", dim3Label: "35% of the index",
+        dim3Strong: "Main driver of the divide.",
+        dim3Desc: "Ability to effectively use digital technologies.",
+        dim3b1: "Basic and advanced digital competencies", dim3b2: "Educational level achieved", dim3b3: "Programming capabilities",
+        dim4Title: "Usage & Utilization", dim4Label: "Dim. 4",
+        dim4Desc: "How technology is used in everyday life.",
+        dim4b1: "Frequency of internet use", dim4b2: "Diversity of online activities", dim4b3: "Mobile device usage",
+        /* FINDINGS */
+        secFindingsLabel: "Key findings",
+        secFindingsTitle: "Strategic insights",
+        f1Title: "National Improvement in Digital Inclusion",
+        f1Text: "The national Digital Divide Index decreased from <strong>0.440 in 2018 to 0.384 in 2024</strong>, representing a cumulative reduction of approximately 12.7%, demonstrating sustained progress in digital inclusion policies.",
+        f1Badge: "↓ 0.056 points over 7 years",
+        f2Title: "Significant Territorial Disparities",
+        f2Text: "Bogotá recorded the lowest digital divide levels in the country, while the <strong>Orinoquía–Amazonía</strong> region continued to show the highest levels of digital exclusion, highlighting a marked territorial inequality.",
+        f3Title: "Digital Skills: The Main Challenge ⚠️",
+        f3Text: "The <strong>Digital Skills</strong> dimension represented the largest contribution to the index, accounting for approximately <strong>35% of the total divide</strong>. This finding highlights the importance of investing in digital literacy, not just connectivity.",
+        f3Badge: "35% of the total divide",
+        f4Title: "Success Story: San Andrés",
+        f4Text: "<strong>San Andrés</strong> showed one of the most significant improvements between 2023 and 2024, demonstrating that targeted interventions and directed investments can generate relevant changes in short periods.",
+        f4Badge: "Best progress 2023–2024",
+        chartTitle: "📉 National IBD Evolution (2018–2024)",
+        chartBadge: "↓ 12.7% cumulative",
+        chartFooter: "Normalized composite index (0–1). Lower values indicate a smaller digital divide.<br/>Source: DANE · PRST · MinEducation · ENPH",
+        /* SOURCES */
+        secSourcesLabel: "Data sources",
+        secSourcesTitle: "Integration of official sources",
+        secSourcesText: "The analysis integrated information from various official Colombian entities to build a robust and nationally representative index.",
+        src1Name: "DANE – National Quality of Life Survey",
+        src1Desc: "Internet access, device ownership, technology adoption and digital conditions of Colombian households.",
+        src2Name: "PRST – Network and Telecommunications Service Providers",
+        src2Desc: "Connectivity, coverage and telecommunications infrastructure indicators by department.",
+        src3Name: "Ministry of National Education",
+        src3Desc: "Educational indicators associated with the development of digital skills and level of schooling.",
+        src4Name: "National Household Budget Survey",
+        src4Desc: "Socioeconomic variables related to access and affordability of technology.",
+        /* ROLE */
+        secRoleLabel: "My contribution",
+        secRoleTitle: "Role in the project",
+        role1Name: "Data preparation & validation", role1Desc: "Integration and cleaning of multiple official sources.",
+        role2Name: "Indicator construction", role2Desc: "Composite index design and dimension normalization.",
+        role3Name: "Power BI Dashboard", role3Desc: "Development of interactive dashboards for decision-makers.",
+        role4Name: "Geographic visualization", role4Desc: "Departmental maps, ranking and trend analysis.",
+        role5Name: "Executive reports", role5Desc: "Storytelling and strategic findings for decision-makers.",
+        role6Name: "Pattern identification", role6Desc: "Territorial analysis and detection of priority regions.",
+        /* SIDEBAR */
+        sideDetailsTitle: "Project details",
+        sideClient: "Client", sidePeriod: "Period", sideScope: "Scope",
+        sideScopeVal: "33 departments", sideType: "Type",
+        sideTypeVal: "Public policy · BI", sideRole: "Role",
+        sideStackTitle: "Technology stack",
+        sideFactorsTitle: "DIGITAL DIVIDE FACTORS",
+        prog1: "Digital Skills", prog2: "Material Access",
+        prog3: "Usage & Utilization", prog4: "Motivation",
+        sideFactorsNote: "* Main dimensions analyzed to evaluate the digital divide in Colombia.",
+        sideCtaTitle: "Interested in this analysis?",
+        sideCtaText: "I can develop similar solutions for your organization or tell you more about the methodology.",
+        contactWhatsapp: "WhatsApp",
+        /* FOOTER */
+        footerBack: "← Back to portfolio",
+      }
+    };
+
+    /* ---------- Función de aplicación ---------- */
+    function applyLang(lang) {
+      const t = TRANSLATIONS[lang];
+      if (!t) return;
+
+      // Actualizar html lang
+      document.documentElement.lang = lang === 'es' ? 'es' : 'en';
+
+      // Aplicar todas las traducciones (innerHTML para soportar <strong>)
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key] !== undefined) {
+          el.innerHTML = t[key];
+        }
+      });
+
+      // Actualizar botones del selector
+      document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+
+      // Actualizar title de la página
+      document.title = lang === 'es'
+        ? 'Índice de Brecha Digital Colombia 2024 | Andrés Gutiérrez'
+        : 'Digital Divide Index Colombia 2024 | Andrés Gutiérrez';
+    }
+
+    /* ---------- Cambiar idioma ---------- */
+    function setLang(lang) {
+      localStorage.setItem('lang', lang);
+      applyLang(lang);
+    }
+
+    /* ---------- Inicialización ---------- */
+    (function init() {
+      // 1. Leer idioma guardado (mismo localStorage que usa index.html)
+      let savedLang = localStorage.getItem('lang');
+
+      // 2. Si no hay nada, detectar idioma del navegador
+      if (!savedLang) {
+        const browserLang = (navigator.language || navigator.userLanguage || 'es').toLowerCase();
+        savedLang = browserLang.startsWith('en') ? 'en' : 'es';
+      }
+
+      applyLang(savedLang);
+    })();
+
+    /* =====================================================
+       RESTO DE SCRIPTS ORIGINALES
+    ===================================================== */
+
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // Fade up observer
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible') });
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: .12 });
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
@@ -939,16 +1207,17 @@
     // Animar progress bars al entrar en viewport
     const progObserver = new IntersectionObserver((entries) => {
       entries.forEach(e => {
-        if(e.isIntersecting) {
+        if (e.isIntersecting) {
           e.target.querySelectorAll('.progress-fill').forEach(bar => {
-            const w = bar.style.width;
+            const targetW = bar.getAttribute('data-width');
             bar.style.width = '0%';
-            setTimeout(() => { bar.style.width = w; }, 200);
+            setTimeout(() => { bar.style.width = targetW; }, 200);
           });
         }
       });
     }, { threshold: .3 });
     document.querySelectorAll('.side-card').forEach(c => progObserver.observe(c));
   </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
